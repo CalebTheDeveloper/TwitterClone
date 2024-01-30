@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.2'
+ruby '3.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.6.1'
+gem 'tzinfo-data'
+    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
 # Use Puma as the app server
 gem 'puma', '>= 5.6.4'
 # Use SCSS for stylesheets
@@ -51,7 +54,7 @@ group :development, :test do
   gem 'awesome_print', '~> 1.9'
   gem 'dotenv-rails', '~> 2.8'
   gem 'factory_bot_rails', '~> 6.2'
-  gem 'pry-rails', '>= 0.3.9'
+  # gem 'pry-rails', '~> 0.3.9'
   gem 'rspec-rails', '~> 5.1'
   gem 'rubocop', '~> 1.36'
   gem 'rubocop-rspec', '2.12'
@@ -71,5 +74,5 @@ end
 
 group :production do
   # Use pg as the database for Active Record
-  gem 'pg', '~> 1.4.3'
+  # gem 'pg', '~> 1.4.3'
 end
